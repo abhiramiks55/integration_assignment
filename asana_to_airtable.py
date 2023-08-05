@@ -3,16 +3,16 @@ import requests
 # Asana API Endpoint and Personal Access Token
 #created from https://app.asana.com/0/my-apps
 ASANA_ENDPOINT = "https://app.asana.com/api/1.0/tasks"
-ASANA_TOKEN = "1/1205211441941274:e316314393745169dfdd134cf2d2964c"
+ASANA_TOKEN = "ASANA TOKEN"
 
 # Airtable API Endpoint and API Key
 # created from https://airtable.com/create/tokens
-AIRTABLE_ENDPOINT = "https://api.airtable.com/v0/appoo9vwGPuvZDngB/tblEhIzvzqt1j9hNt"
-AIRTABLE_API_KEY = "patNYwm0lNypDReJx.5c1f5adff734bc52f5f17faed4b94d061d0a56e12890278e3ca2307ad0b0988f"
+AIRTABLE_ENDPOINT = "https://api.airtable.com/v0/airtable_baseID/task_ID"
+AIRTABLE_API_KEY = "AIRTABLE TOKEN"
 
 def get_new_asana_tasks():
     headers = {"Authorization": f"Bearer {ASANA_TOKEN}"}
-    project_id = "1205215838700672"  # project ID from Asana
+    project_id = "PROJECT ID"  # project ID from Asana
     params = {"project": project_id, "completed_since": "now"}
 
     response = requests.get(ASANA_ENDPOINT, headers=headers, params=params)
